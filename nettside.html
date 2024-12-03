@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FargerikeSkos - Din Sko Nettbutikk</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>FargerikeSkos</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#hjem">Hjem</a></li>
+                <li><a href="#produkter">Produkter</a></li>
+                <li><a href="#om-oss">Om oss</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+        <div class="handlekurv-ikon">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="handlekurv-antall">0</span>
+        </div>
+    </header>
+    <main>
+        <section id="filter">
+            <h2>Filtrer produkter</h2>
+            <select id="kategori-filter">
+                <option value="alle">Alle kategorier</option>
+                <option value="løpesko">Løpesko</option>
+                <option value="joggesko">Joggesko</option>
+                <option value="sandaler">Sandaler</option>
+            </select>
+            <input type="range" id="pris-filter" min="0" max="2000" value="2000">
+            <span id="pris-verdi">Maks pris: 2000 kr</span>
+        </section>
+        <section id="produkter"></section>
+    </main>
+    <footer>
+        <p>&copy; 2024 FargerikeSkos. Alle rettigheter reservert.</p>
+    </footer>
+    <div id="handlekurv-modal" class="modal">
+        <div class="modal-innhold">
+            <span class="lukk">&times;</span>
+            <h2>Din handlekurv</h2>
+            <div id="handlekurv-liste"></div>
+            <p>Totalt: <span id="handlekurv-total">0</span> kr</p>
+            <button id="kjop-knapp">Gå til kasse</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
